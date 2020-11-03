@@ -1,0 +1,48 @@
+# ------------------------------------------------------
+# THIS FILE WAS AUTOMATICALLY GENERATED (DO NOT MODIFY)
+# ------------------------------------------------------
+
+type ItemType {
+  id: ID!
+  title: String!
+  price: Int!
+  description: String!
+}
+
+type CompanyType {
+  id: ID!
+  companyname: String!
+  personname: String!
+  phone: Int!
+  address: String!
+  industry: String!
+  location: String!
+}
+
+type Query {
+  items: [ItemType!]!
+  hello: String!
+  Company: [CompanyType!]!
+}
+
+type Mutation {
+  createItem(input: ItemInput!): ItemType!
+  deleteItem(id: String!): ItemType!
+  createCompany(input: CompanyInput!): CompanyType!
+  deleteCompany(id: String!): CompanyType!
+}
+
+input ItemInput {
+  title: String!
+  price: Int!
+  description: String!
+}
+
+input CompanyInput {
+  companyname: String!
+  personname: String!
+  phone: Int!
+  address: String!
+  industry: String!
+  location: String!
+}
